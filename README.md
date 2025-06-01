@@ -1,6 +1,6 @@
-# Sitio Web Promocional Moderno
+# Landing Page de Promociones Siman
 
-Este proyecto es un sitio web promocional moderno que presenta un encabezado elegante con un slider de imágenes mostrando varias promociones.
+Este proyecto es una landing page moderna y responsiva para **Siman El Salvador**, dedicada a promociones exclusivas, descuentos y eventos especiales.
 
 ## Estructura del Proyecto
 
@@ -9,6 +9,10 @@ modern-promo-website
 ├── public
 │   └── index.html
 ├── src
+│   ├── pages
+│   │   ├── celulares.html
+│   │   ├── tecnologia.html
+│   │   └── aires.html
 │   └── styles
 │       └── main.css
 └── README.md
@@ -16,21 +20,27 @@ modern-promo-website
 
 ## Características
 
-- **Diseño Responsivo**: El sitio web está diseñado para ser responsivo y se ve genial tanto en dispositivos de escritorio como móviles.
-- **Slider de Imágenes (CSS)**: Un slider de imágenes en el encabezado realizado solo con HTML y CSS, utilizando imágenes alojadas en Cloudinary.
-- **Estilos Personalizados**: El sitio web utiliza estilos CSS personalizados para crear un aspecto moderno y atractivo.
+- **Diseño atractivo y coherente con la marca Siman**
+- **Diseño responsivo** para escritorio y dispositivos móviles
+- **Slider de imágenes** en el encabezado
+- **Navegación entre 3 páginas**: Celulares, Tecnología y Aires Acondicionados
+- **Sección de suscripción** para recibir promociones
+- **Contenido multimedia** (imágenes de productos y banners)
+- **Paleta de colores y tipografías personalizadas**
+- **HTML semántico y buenas prácticas de CSS**
 
 ## Instalación
 
-No se requiere instalación de dependencias ni archivos JSON. Solo descarga o clona el repositorio.
+No se requiere instalación de dependencias. Solo descarga o clona el repositorio.
 
 ## Uso
 
-Para ejecutar el sitio web localmente, abre el archivo `public/index.html` en tu navegador web.
+Abre el archivo `public/index.html` en tu navegador web para ver la landing page.  
+Navega entre las secciones desde el menú superior.
 
-## Contribuyendo
+## Colaboración
 
-Siéntete libre de enviar problemas o solicitudes de extracción si tienes sugerencias o mejoras para el proyecto.
+Puedes enviar issues o pull requests si tienes sugerencias o mejoras para el proyecto.
 
 ## Licencia
 
