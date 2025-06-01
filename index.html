@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Promo Website</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="header-top">
+            <button class="header-menu-btn" aria-label="Menú">&#9776;</button>
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/0320199c-a291-4a04-a9ea-bb7f602709ce___6ed5888c44f710335956b213e47c7feb.svg" alt="Siman logo">
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="../src/pages/celulares.html">Celulares</a></li>
+                    <li><a href="../src/pages/tecnologia.html">Tecnología</a></li>
+                    <li><a href="../src/pages/aires.html">Aires acondicionados</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Slider aquí -->
+    <header>
+        <div class="slider">
+            <div class="slide slide1"></div>
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+        </div>
+    </header>
+    <main>
+        <h1>Bienvenido a Nuestro Sitio Promocional Moderno</h1>
+        <p>¡Descubre nuestras últimas promociones y ofertas!</p>
+    </main>
+    <!-- Sección de suscripción -->
+    <section class="suscripcion">
+        <h2>¡Suscríbete para recibir nuestras promociones!</h2>
+        <form class="suscripcion-form">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+            <button type="submit">Suscribirme</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 Siman El Salvador. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+    document.querySelector('.header-menu-btn').addEventListener('click', function() {
+        document.querySelector('.header-nav').classList.toggle('show');
+    });
+    </script>
+</body>
+</html>
