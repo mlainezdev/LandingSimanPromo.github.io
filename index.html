@@ -26,16 +26,22 @@
         </div>
     </header>
     <!-- Slider aquí -->
-    <header>
-        <div class="slider">
-            <div class="slide slide1"></div>
-            <div class="slide slide2"></div>
-            <div class="slide slide3"></div>
-        </div>
-    </header>
+
+       <section class="slider">
+    <div class="slide active">
+        <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/8d9556b5-360e-4a18-a139-a141afd063cc___2662e05b85fd7180b5e0d6a8f04fcaf6.gif" alt="Promo 1">
+    </div>
+    <div class="slide">
+        <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/d79a6cb8-3d71-48a1-a7b5-9f09764fa78d___7d1a41e6ac64584d261158fda104cae3.gif" alt="Promo 2">
+    </div>
+    <div class="slide">
+        <img src="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/d25268c4-dc25-4905-abe9-299f03ea1e40___198f978ba3562f795657c994d5fc1ecf.gif" alt="Promo 3">
+    </div>
+    <button class="slider-btn prev">&#10094;</button>
+    <button class="slider-btn next">&#10095;</button>
+</section>
     <main>
         <h1>Bienvenido a Nuestro Sitio Promocional Moderno</h1>
-        <p>¡Descubre nuestras últimas promociones y ofertas!</p>
     </main>
     <!-- Sección de suscripción -->
     <section class="suscripcion">
@@ -50,5 +56,33 @@
         <p>&copy; 2025 Siman El Salvador. Todos los derechos reservados.</p>
     </footer>
     <script src="/LandingSimanPromo.github.io/main.js"></script>
+    <script>
+    // Slider functionality
+    const slides = document.querySelectorAll('.slider .slide');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+        showSlide(currentSlide);
+    });
+
+    // Optional: auto-slide
+    setInterval(() => {
+        nextBtn.click();
+    }, 5000);
+    </script>
 </body>
 </html>

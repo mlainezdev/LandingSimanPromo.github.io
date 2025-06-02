@@ -10,38 +10,6 @@ header {
     height: 400px;
 }
 
-.slider {
-    width: 100%;
-    height: 400px;
-    position: relative;
-    display: flex;
-    animation: slideAnimation 12s infinite;
-}
-
-.slide {
-    min-width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s;
-}
-
-.slide1 { background-image: url('https://res.cloudinary.com/dmydsvqhk/image/upload/v1748145712/banner_noche_bi2fky.png'); animation-delay: 0s; }
-.slide2 { background-image: url('https://res.cloudinary.com/dmydsvqhk/image/upload/v1748145712/banner_noche_bi2fky.png'); animation-delay: 4s; }
-.slide3 { background-image: url('https://res.cloudinary.com/dmydsvqhk/image/upload/v1748145712/banner_noche_bi2fky.png'); animation-delay: 8s; }
-
-@keyframes slideAnimation {
-    0%, 100% { opacity: 1; }
-    33.33%, 66.66% { opacity: 0; }
-}
-
-.slide1 { animation: fade 12s infinite; }
-.slide2 { animation: fade 12s infinite 4s; }
-.slide3 { animation: fade 12s infinite 8s; }
 
 @keyframes fade {
     0% { opacity: 1; }
@@ -181,9 +149,8 @@ h1 {
         justify-content: flex-start;
         margin: 0;
     }
-    /* quiero agregarle un margin top que sea igual al heith del header */
     .header-nav.show {
-        padding-top: 60px;       /* Agrega esta línea */
+        padding-top: 60px; 
         transform: translateX(0);
         display: flex;
         width: auto;
@@ -258,6 +225,7 @@ h1 {
     opacity: 1;
 }
 .product-img.hover-img {
+    position: relative;
     z-index: 2;
     opacity: 0;
 }
@@ -402,4 +370,82 @@ h1 {
     font-size: 1em;
     margin-top: 2em;
     border-radius: 12px 12px 0 0;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 32px auto 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+.slide.active {
+    display: flex;
+    animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.slide img {
+    width: 100%;
+    height: auto; /* Hace que la altura sea automática según la imagen */
+    max-height: 480px; /* Opcional: limita la altura máxima */
+    object-fit: contain; /* Muestra la imagen completa sin recortar */
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.slider-btn:hover {
+    background: #a83338;
+}
+.slider-btn.prev { left: 24px; }
+.slider-btn.next { right: 24px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .slider {
+        max-width: 98vw;
+        border-radius: 12px;
+    }
+    .slide img {
+        border-radius: 12px;
+        max-height: 300px;
+    }
+}
+@media (max-width: 600px) {
+    .slider {
+        border-radius: 8px;
+    }
+    .slide img {
+        border-radius: 8px;
+        max-height: 180px;
+    }
 }
