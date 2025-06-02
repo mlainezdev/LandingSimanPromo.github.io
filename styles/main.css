@@ -149,9 +149,8 @@ h1 {
         justify-content: flex-start;
         margin: 0;
     }
-    /* quiero agregarle un margin top que sea igual al heith del header */
     .header-nav.show {
-        padding-top: 60px;       /* Agrega esta línea */
+        padding-top: 60px; 
         transform: translateX(0);
         display: flex;
         width: auto;
