@@ -48,20 +48,22 @@ const slides = document.querySelectorAll('.slider .slide');
         });
     }
 
-    prevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
-        showSlide(currentSlide);
-    });
+    if (prevBtn && nextBtn && slides.length > 0) {
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        });
 
-    nextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
-        showSlide(currentSlide);
-    });
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+            showSlide(currentSlide);
+        });
 
-    // Optional: auto-slide
-    setInterval(() => {
-        nextBtn.click();
-    }, 5000);
+        // Optional: auto-slide
+        setInterval(() => {
+            nextBtn.click();
+        }, 5000);
+    }
 });
 
 
